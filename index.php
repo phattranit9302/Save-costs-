@@ -23,6 +23,36 @@
         $arrayPostData['messages'][0]['text'] = "กรุณาพิมพ์ข้อความต่อไปนี้"."\n"." (1)  เว็บไซต์ OTOP"."\n"." (2)  ข้อมูลเกี่ยวกับบรรจุภัณฑ์"."\n"." (3)  ราคาบรรจุัณฑ์"."\n"." (4) ราคาบรรจุัณฑ์"."\n"." (5)  ราคาบรรจุภัณฑ์ที่ถูกที่สุด"."\n";
         replyMsg($arrayHeader,$arrayPostData);
     }
+else if($message == "1"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "http://www.thaitambon.com/province/%E0%B8%95%E0%B8%A3%E0%B8%B1%E0%B8%87"; //เว็บไซต์ OTOP ที่น้องจะใส่นะ
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+    else if($message == "2"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "บรรจุภัณฑ์ส่วนใหญ่จะมีลักษณะเป็นปรึซึมสี่เหลี่ยมมุมฉากและทรงกระบอก"; //ข้อมูลเกี่ยวกับบบรจุภัณฑ์ที่น้องจะใส่
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+     else if($message == "3"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ราคาจะค่อนข้างจะสูง"; //ข้อมูลเกี่ยวกับราคาบบรจุภัณฑ์ ถ้าเป็นตารางน้องเอาลง google drive นะเซฟเป็น exel ละวางลิ้งตรงนี้
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+     else if($message == "4"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "https://drive.google.com/open?id=1PgwQTQGe472nqx02jUhm00J4jaZjnOsp"; //ข้อมูลเกี่ยวกับราคาบบรจุภัณฑ์ ถ้าเป็นตารางน้องเอาลง google drive นะเซฟเป็น exel ละวางลิ้งตรงนี้
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+    else if($message == "5"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "https://drive.google.com/open?id=1PgwQTQGe472nqx02jUhm00J4jaZjnOsp"; //ข้อมูลเกี่ยวกับราคาบบรจุภัณฑ์ที่ถูกสุด ถ้าเป็นตารางน้องเอาลง google drive นะเซฟเป็น exel ละวางลิ้งตรงนี้
+        replyMsg($arrayHeader,$arrayPostData);
+    }
     #ตัวอย่าง Message Type "Sticker"
     else if($message == "ฝันดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
