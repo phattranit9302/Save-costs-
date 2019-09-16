@@ -20,7 +20,7 @@
     if($message == "เมนู"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "กรุณาพิมพ์ข้อความต่อไปนี้"."\n"." (1)เว็บไซต์ OTOP"."\n"." (2)พื้นที่ผิวที่น้อยที่สุดของปริซึมสี่เหลี่ยมมุนฉาก"."\n"." (3)พื้นที่ผิวที่น้อยที่สุดของทรงกระบอก"."\n"."(4)พิกัด OTOP จังหวัดตรัง";
+        $arrayPostData['messages'][0]['text'] = "กรุณาพิมพ์ข้อความต่อไปนี้"."\n"." (1)เว็บไซต์ OTOP"."\n"." (2)พื้นที่ผิวที่น้อยที่สุดของปริซึมสี่เหลี่ยมมุนฉาก"."\n"." (3)พื้นที่ผิวที่น้อยที่สุดของทรงกระบอก"."\n"."(4)พิกัด OTOP จังหวัดตรัง"."\n"." (5)เพจ Facebook ;
         replyMsg($arrayHeader,$arrayPostData);
     }
 else if($message == "1"){
@@ -40,6 +40,12 @@ else if($message == "1"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "https://drive.google.com/open?id=1PgwQTQGe472nqx02jUhm00J4jaZjnOsp"; //ข้อมูลเกี่ยวกับราคาบบรจุภัณฑ์ที่ถูกสุด ถ้าเป็นตารางน้องเอาลง google drive นะเซฟเป็น exel ละวางลิ้งตรงนี้
+        replyMsg($arrayHeader,$arrayPostData);
+   {
+        else if($message == "1"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "https://www.facebook.com/savecostssaveworld/?modal=admin_todo_tour"; //เว็บไซต์ OTOP ที่น้องจะใส่นะ
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Sticker"
