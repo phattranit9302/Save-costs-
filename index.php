@@ -26,7 +26,7 @@
 else if($message == "1"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "http://www.thaitambon.com/province/%E0%B8%95%E0%B8%A3%E0%B8%B1%E0%B8%87"; //เว็บไซต์ OTOP ที่น้องจะใส่นะ
+        $arrayPostData['messages'][0]['text'] = "https://bit.ly/2lWrKKs";  //เว็บไซต์ OTOP ที่น้องจะใส่นะ
         replyMsg($arrayHeader,$arrayPostData);
     }
  
@@ -42,7 +42,7 @@ else if($message == "1"){
         $arrayPostData['messages'][0]['text'] = "https://drive.google.com/open?id=1PgwQTQGe472nqx02jUhm00J4jaZjnOsp"; //ข้อมูลเกี่ยวกับราคาบบรจุภัณฑ์ที่ถูกสุด ถ้าเป็นตารางน้องเอาลง google drive นะเซฟเป็น exel ละวางลิ้งตรงนี้
         replyMsg($arrayHeader,$arrayPostData);
    {
-        else if($message == "1"){
+        else if($message == "5"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "https://www.facebook.com/savecostssaveworld/?modal=admin_todo_tour"; //เว็บไซต์ OTOP ที่น้องจะใส่นะ
