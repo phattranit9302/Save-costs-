@@ -20,7 +20,7 @@
     if($message == "เมนู"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "กรุณาพิมพ์ข้อความต่อไปนี้"."\n"." (1)  เว็บไซต์ OTOP"."\n"." (2) พื้นที่ผิวที่น้อยที่สุดของปริซึมสี่เหลี่ยมมุนฉาก"."\n"." (3) พื้นที่ผิวที่น้อยที่สุดของทรงกระบอก"."\n"." (6) พิกัด OTOP จังหวัดตรัง";
+        $arrayPostData['messages'][0]['text'] = "กรุณาพิมพ์ข้อความต่อไปนี้"."\n"." (1) เว็บไซต์ OTOP"."\n"." (2) พื้นที่ผิวที่น้อยที่สุดของปริซึมสี่เหลี่ยมมุนฉาก"."\n"." (3) พื้นที่ผิวที่น้อยที่สุดของทรงกระบอก"."\n"." (4) พิกัด OTOP จังหวัดตรัง";
         replyMsg($arrayHeader,$arrayPostData);
     }
 else if($message == "1"){
@@ -60,7 +60,7 @@ else if($message == "1"){
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Location"
-    else if($message == "6"){
+    else if($message == "4"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "location";
         $arrayPostData['messages'][0]['title'] = "OTOP จังหวัดตรัง";
