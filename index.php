@@ -20,7 +20,7 @@
     if($message == "เมนู"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "กรุณาพิมพ์ข้อความต่อไปนี้"."\n"." (1) เว็บไซต์ OTOP"."\n"." (2) พื้นที่ผิวที่น้อยที่สุดของปริซึมสี่เหลี่ยมมุนฉาก"."\n"." (3) พื้นที่ผิวที่น้อยที่สุดของทรงกระบอก"."\n"." (4) พิกัด OTOP จังหวัดตรัง"."\n"." (5) FB : ช่องทางการติดต่อ ";
+        $arrayPostData['messages'][0]['text'] = "กรุณาพิมพ์ข้อความต่อไปนี้"."\n"." (1) เว็บไซต์ OTOP"."\n"." (2) พื้นที่ผิวที่น้อยที่สุดของปริซึมสี่เหลี่ยมมุนฉาก"."\n"." (3) พื้นที่ผิวที่น้อยที่สุดของทรงกระบอก"."\n"." (4) พิกัด OTOP จังหวัดตรัง"."\n"." (5) FB : ช่องทางการติดต่อ "."\n"." (6) พิกัดโรงเรียนวิเชียรมาตุ จังหวัดตรัง";
         replyMsg($arrayHeader,$arrayPostData);
     }
 else if($message == "1"){
@@ -73,6 +73,16 @@ else if($message == "1"){
         $arrayPostData['messages'][0]['address'] =   " 12.826338461123994, 101.13054852513119";
         $arrayPostData['messages'][0]['latitude'] = " 12.826338461123994";
         $arrayPostData['messages'][0]['longitude'] = " 101.13054852513119";
+        replyMsg($arrayHeader,$arrayPostData);
+   {   
+        #ตัวอย่าง Message Type "Location"
+    else if($message == "4"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "location";
+        $arrayPostData['messages'][0]['title'] = "โรงเรียนวิเชียรมาตุ จังหวัดตรัง";
+        $arrayPostData['messages'][0]['address'] =   "7.504249, 99.629988 ";
+        $arrayPostData['messages'][0]['latitude'] = "7.504249";
+        $arrayPostData['messages'][0]['longitude'] = "  99.629988';
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Text + Sticker ใน 1 ครั้ง"
