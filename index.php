@@ -15,6 +15,9 @@
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
+        $arrayPostData['messages'][1]['type'] = "sticker";
+        $arrayPostData['messages'][1]['packageId'] = "11538";
+        $arrayPostData['messages'][1]['stickerId'] = "51626494";
         replyMsg($arrayHeader,$arrayPostData);
     }
     if($message == "เมนู"){
