@@ -85,6 +85,7 @@ else if($message == "1"){
         $arrayPostData['messages'][0]['longitude'] = "  99.629988';
         replyMsg($arrayHeader,$arrayPostData);
     }
+    
     #ตัวอย่าง Message Type "Text + Sticker ใน 1 ครั้ง"
     else if($message == "ลาก่อน"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
