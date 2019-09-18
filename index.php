@@ -75,6 +75,15 @@ else if($message == "1"){
         $arrayPostData['messages'][0]['longitude'] = " 101.13054852513119";
         replyMsg($arrayHeader,$arrayPostData);
     }
+ else if($message == "6"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "location";
+        $arrayPostData['messages'][0]['title'] = "โรงเรียนวิเชียรมาตุ";
+        $arrayPostData['messages'][0]['address'] =   "7.504249, 99.629988 ";
+        $arrayPostData['messages'][0]['latitude'] = "7.504249";
+        $arrayPostData['messages'][0]['longitude'] ="99.629988 ";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
     #ตัวอย่าง Message Type "Text + Sticker ใน 1 ครั้ง"
     else if($message == "ลาก่อน"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
