@@ -36,13 +36,13 @@ else if($message == "1"){
      else if($message == "2"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "https://drive.google.com/open?id=1lHUeSoYGIlNhQCbLwgWkX6cWMzWmJnIN"; //ข้อมูลเกี่ยวกับราคาบบรจุภัณฑ์ ถ้าเป็นตารางน้องเอาลง google drive นะเซฟเป็น exel ละวางลิ้งตรงนี้
+        $arrayPostData['messages'][0]['text'] = "https://drive.google.com/file/d/102sVOCnlQflIEV6D7h5p25r4ZGrXB-L5/view?usp=drivesdk"; //ข้อมูลเกี่ยวกับราคาบบรจุภัณฑ์ ถ้าเป็นตารางน้องเอาลง google drive นะเซฟเป็น exel ละวางลิ้งตรงนี้
         replyMsg($arrayHeader,$arrayPostData);
-    }
+   
     else if($message == "3"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "https://drive.google.com/open?id=1PgwQTQGe472nqx02jUhm00J4jaZjnOsp"; //ข้อมูลเกี่ยวกับราคาบบรจุภัณฑ์ที่ถูกสุด ถ้าเป็นตารางน้องเอาลง google drive นะเซฟเป็น exel ละวางลิ้งตรงนี้
+        $arrayPostData['messages'][0]['text'] = "https://drive.google.com/file/d/106i2hzrRz_hcndfVahnSht-cM84yHttI/view?usp=drivesdk"; //ข้อมูลเกี่ยวกับราคาบบรจุภัณฑ์ที่ถูกสุด ถ้าเป็นตารางน้องเอาลง google drive นะเซฟเป็น exel ละวางลิ้งตรงนี้
         replyMsg($arrayHeader,$arrayPostData);
     }
  else if($message == "5"){
