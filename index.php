@@ -1,5 +1,5 @@
 <?php
-    $accessToken = "5gZQWeN7r4W76y0rDoTq1kmZKNe0AHqZCoN0qKKUpVRyTg1qYcDk+9uvFzT0wOC1T6YhxwQ6qdRd7ld6Nnf/VT6rhFuPKAXakQ2gQazw/rDdeEmMASmG0i0wxPq5J9mT0CB1EQy2A2p+Bra2ayaa/AdB04t89/1O/w1cDnyilFU=";//copy Channel access token ในไลน์มาใส่
+    $accessToken = "5gZQWeN7r4W76y0rDoTq1kmZKNe0AHqZCoN0qKKUpVRyTg1qYcDk+9uvFzT0wOC1T6YhxwQ6qdRd7ld6Nnf/VT6rhFuPKAXakQ2gQazw/rDdeEmMASmG0i0wxPq5J9mT0CB1EQy2A2p+Bra2ayaa/AdB04t89/1O/w1cDnyilFU=";
     
     $content = file_get_contents('php://input');
     $arrayJson = json_decode($content, true);
@@ -29,14 +29,14 @@
 else if($message == "1"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "http://www.thaitambon.com/province/%E0%B8%95%E0%B8%A3%E0%B8%B1%E0%B8%87"; //เว็บไซต์ OTOP ที่น้องจะใส่นะ
+        $arrayPostData['messages'][0]['text'] = "http://www.thaitambon.com/province/%E0%B8%95%E0%B8%A3%E0%B8%B1%E0%B8%87"; 
         replyMsg($arrayHeader,$arrayPostData);
     }
  
      else if($message == "2"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "https://l.facebook.com/l.php?u=https%3A%2F%2Freducecostssavethematerials.000webhostapp.com%2Ffrom.php%3Ffbclid%3DIwAR3O2gaeWY0ME5syPZhIAMYfly3_ZUDoZtbWDa-HuB_V69eRudGtBPYrlCw&h=AT0yMJlACqI7RcHS0ig8xuh7CBQrJvsCWcfaZ3pBkyjcW_gpr9gCQEoD7_5Qsr-7IFuchgXKZXpGhqks5g0SX4Wcel5eiZApP0zRasd9P0xvNRFXxzFAKwnxkjPaclaYKW8Lqw"; //ข้อมูลเกี่ยวกับราคาบบรจุภัณฑ์ ถ้าเป็นตารางน้องเอาลง google drive นะเซฟเป็น exel ละวางลิ้งตรงนี้
+        $arrayPostData['messages'][0]['text'] = "https://l.facebook.com/l.php?u=https%3A%2F%2Freducecostssavethematerials.000webhostapp.com%2Ffrom.php%3Ffbclid%3DIwAR3O2gaeWY0ME5syPZhIAMYfly3_ZUDoZtbWDa-HuB_V69eRudGtBPYrlCw&h=AT0yMJlACqI7RcHS0ig8xuh7CBQrJvsCWcfaZ3pBkyjcW_gpr9gCQEoD7_5Qsr-7IFuchgXKZXpGhqks5g0SX4Wcel5eiZApP0zRasd9P0xvNRFXxzFAKwnxkjPaclaYKW8Lqw";
         replyMsg($arrayHeader,$arrayPostData);
     }
   
