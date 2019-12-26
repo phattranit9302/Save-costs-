@@ -23,7 +23,7 @@
     if($message == "เมนู"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "กรุณาพิมพ์ข้อความต่อไปนี้"."\n"." (1) เว็บไซต์ OTOP"."\n"." (2) พื้นที่ผิวที่น้อยที่สุดของปริซึมสี่เหลี่ยมมุนฉาก"."\n"." (3) พื้นที่ผิวที่น้อยที่สุดของทรงกระบอก"."\n"." (4) พิกัด OTOP จังหวัดตรัง"."\n"." (5) FB : ช่องทางการติดต่อ "."\n"." (6) ตำแหน่งที่ตั้งแอดมิน ";
+        $arrayPostData['messages'][0]['text'] = "กรุณาพิมพ์ข้อความต่อไปนี้"."\n"." (1) เว็บไซต์ OTOP"."\n"." (2) พื้นที่ผิวที่น้อยที่น้อยที่สุดของปริซึมและทรงกระบอก"."\n"." (3) พิกัด OTOP จังหวัดตรัง"."\n"." (4) FB : ช่องทางการติดต่อ "."\n"." (5) ตำแหน่งที่ตั้งแอดมิน ";
         replyMsg($arrayHeader,$arrayPostData);
     }
 else if($message == "1"){
@@ -36,19 +36,14 @@ else if($message == "1"){
      else if($message == "2"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "https://drive.google.com/file/d/10eMY0kDUndAsMWld8rnxpIktFpSunojd/view?usp=drivesdk"; //ข้อมูลเกี่ยวกับราคาบบรจุภัณฑ์ ถ้าเป็นตารางน้องเอาลง google drive นะเซฟเป็น exel ละวางลิ้งตรงนี้
+        $arrayPostData['messages'][0]['text'] = "https://l.facebook.com/l.php?u=https%3A%2F%2Freducecostssavethematerials.000webhostapp.com%2Ffrom.php%3Ffbclid%3DIwAR3O2gaeWY0ME5syPZhIAMYfly3_ZUDoZtbWDa-HuB_V69eRudGtBPYrlCw&h=AT0yMJlACqI7RcHS0ig8xuh7CBQrJvsCWcfaZ3pBkyjcW_gpr9gCQEoD7_5Qsr-7IFuchgXKZXpGhqks5g0SX4Wcel5eiZApP0zRasd9P0xvNRFXxzFAKwnxkjPaclaYKW8Lqw"; //ข้อมูลเกี่ยวกับราคาบบรจุภัณฑ์ ถ้าเป็นตารางน้องเอาลง google drive นะเซฟเป็น exel ละวางลิ้งตรงนี้
         replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message == "3"){
+  
+ else if($message == "4"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "https://drive.google.com/file/d/10fCYZKU0LmL31A3YzoUxHHctMbP9zxJe/view?usp=drivesdk"; //ข้อมูลเกี่ยวกับราคาบบรจุภัณฑ์ที่ถูกสุด ถ้าเป็นตารางน้องเอาลง google drive นะเซฟเป็น exel ละวางลิ้งตรงนี้
-        replyMsg($arrayHeader,$arrayPostData);
-    }
- else if($message == "5"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "https://www.facebook.com/savecostssaveworld/"; //ข้อมูลเกี่ยวกับราคาบบรจุภัณฑ์ ถ้าเป็นตารางน้องเอาลง google drive นะเซฟเป็น exel ละวางลิ้ง
+        $arrayPostData['messages'][0]['text'] = "https://www.facebook.com/savecostssaveworld/"; 
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Sticker"
@@ -72,7 +67,7 @@ else if($message == "1"){
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Location"
-    else if($message == "4"){
+    else if($message == "3"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "location";
         $arrayPostData['messages'][0]['title'] = "OTOP จังหวัดตรัง";
