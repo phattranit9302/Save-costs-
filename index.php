@@ -23,7 +23,7 @@
     if($message == "เมนู"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "กรุณาพิมพ์ข้อความต่อไปนี้"."\n"." (1) เว็บไซต์ OTOP"."\n"." (2) พื้นที่ผิวที่น้อยที่น้อยที่สุดของปริซึมและทรงกระบอก"."\n"." (3) พิกัด OTOP จังหวัดตรัง"."\n"." (4) FB : ช่องทางการติดต่อ "."\n"." (5) ตำแหน่งที่ตั้งแอดมิน ";
+        $arrayPostData['messages'][0]['text'] = "กรุณาพิมพ์ข้อความต่อไปนี้"."\n"." (1) เว็บไซต์ OTOP"."\n"." (2) พื้นที่ผิวที่น้อยที่น้อยที่สุดของปริซึมสี่เหลี่ยมมุมฉาก"."\n"." (3) พื้นที่ผิวที่น้อยที่น้อยที่สุดของทรงกระบอก"."\n"." (4) FB : ช่องทางการติดต่อ "."\n"." ;
         replyMsg($arrayHeader,$arrayPostData);
     }
 else if($message == "1"){
@@ -33,17 +33,40 @@ else if($message == "1"){
         replyMsg($arrayHeader,$arrayPostData);
     }
  
-     else if($message == "2"){
+else if($message == "2"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "https://l.facebook.com/l.php?u=https%3A%2F%2Freducecostssavethematerials.000webhostapp.com%2Ffrom.php%3Ffbclid%3DIwAR3O2gaeWY0ME5syPZhIAMYfly3_ZUDoZtbWDa-HuB_V69eRudGtBPYrlCw&h=AT0yMJlACqI7RcHS0ig8xuh7CBQrJvsCWcfaZ3pBkyjcW_gpr9gCQEoD7_5Qsr-7IFuchgXKZXpGhqks5g0SX4Wcel5eiZApP0zRasd9P0xvNRFXxzFAKwnxkjPaclaYKW8Lqw";
+        $arrayPostData['messages'][0]['text'] = "กรุณากรอกปริมาตรตามต้องการ";
+        $message name "$v" id "v"
+        $w = pow(($v*3),0.33333)/2 ;
+        $l = pow(($v*3),0.33333));
+        $h = pow(($v/9),0.33333)*2; 
+        $m = (($w**2)*4)+(6*$w*$h); 
+        $arrayPostData['messages'][0]['text'] = "ปริมาตร = $v";
+        $arrayPostData['messages'][0]['text'] = "กว้าง = $w";
+        $arrayPostData['messages'][0]['text'] = "ยาว = $l";
+        $arrayPostData['messages'][0]['text'] = "สูง = $้h";
+        $arrayPostData['messages'][0]['text'] = "พื้นที่ผิวที่น้อยที่สุด = $m";
+
         replyMsg($arrayHeader,$arrayPostData);
     }
+elseif ($message is_float or $message is_int){
+    
+
+}
   
- else if($message == "4"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "https://www.facebook.com/savecostssaveworld/"; 
+ else if($message == "3"){
+    $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+    $arrayPostData['messages'][0]['type'] = "text";
+    $arrayPostData['messages'][0]['text'] = "กรุณากรอกปริมาตรตามต้องการ";
+    $message name "$v" id "v"
+    $r =pow((v/(2*3.14)),0.33333);
+    $h2 =(2*r) ;
+    $m2 =(6*3.14*(pow(r,2)) ;
+    $arrayPostData['messages'][0]['text'] = "ปริมาตร = $v";
+    $arrayPostData['messages'][0]['text'] = "รัศมี = $w";
+    $arrayPostData['messages'][0]['text'] = "สูง = $l";
+    $arrayPostData['messages'][0]['text'] = "พื้นที่ผิวที่น้อยที่สุด = $m";
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Sticker"
